@@ -1,8 +1,13 @@
+import { ReactNode, useState } from 'react';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 
-const DefaultLayout: React.FC = ({ children }) => {
+interface DefaultLayoutProps {
+    children: ReactNode;
+  }
+
+  const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     return (
       <div className="container mx-auto">
         <Header />
@@ -12,3 +17,5 @@ const DefaultLayout: React.FC = ({ children }) => {
       </div>
     );
   };
+
+  export default DefaultLayoutProps;
